@@ -1,12 +1,15 @@
-import { LibraryBig } from "lucide-react";
-import React from "react";
+import { SignInButton } from "@clerk/nextjs";
+import { Button } from "@/components/ui/button";
+import Logo from "./logo";
 
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between p-4">
-      <div className="flex items-center justify-center text-muted">
-        <LibraryBig className="h-12 w-12" />
-        <p className="ml-2 text-xl font-bold">AI Teacher</p>
+      <Logo />
+      <div>
+        <Button size="sm" className="font-semibold  hover:bg-transparent">
+          <SignInButton>Get Start</SignInButton>
+        </Button>
       </div>
     </nav>
   );
